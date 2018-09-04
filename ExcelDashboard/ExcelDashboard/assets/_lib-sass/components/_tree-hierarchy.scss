@@ -1,0 +1,337 @@
+// user
+.agentBg {background-color: $body-bg;border-top: 1px solid #cfd8dc;border-bottom: 1px solid #cfd8dc;overflow: hidden;padding: 20px 0px;}
+.agentIco {-webkit-border-radius:50%;border-radius: 50%;width: 70px;height: 70px;float: left;overflow: hidden;margin-right: 10px;}
+.agentIco img {width: 100%;}
+.agentBg h3 {float: left;font-size: 22px;}
+.agentBg h3 span {color: #757575 ;font-size: 14px;display: block;}
+.agentBg .pull-right {text-align: right; }
+.agentBg .pull-right .btn{ margin-top: 18px;}
+// .agentBg .pull-right .btn-default:hover {background-color: #167ccc;border-color:#167ccc;}
+.userInfo {overflow: hidden;height: 73px;}
+.userInfo .userIco {-webkit-border-radius:50%;border-radius: 50%;float: left;width: 50px;height: 50px;overflow: hidden;}
+.userInfo .userIco img {width: 100%;}
+.userInfo span.name {float: left;margin-left: 10px;font-size: 15px !important;font-weight: bold !important;margin-top: 6px;}
+.userInfo span.name span {font-weight: normal !important;font-size: 13px !important;}
+.padd-null {padding: 0px;}
+ul.twoRow {text-align: center;}
+.tree ul ul.twoRow::before {height: 128px;}
+/* Tree Css */
+
+* {padding: 0px;margin: 0px;}
+
+.tree li,
+.tree ul
+{
+    position: relative
+}
+
+.tree,
+.tree li,
+header {
+    text-align: center
+}
+
+.tree {
+    display: table;
+    margin: auto;
+    padding-bottom: 20px
+}
+
+.tree ul {
+    margin: 0 auto;
+    padding-top: 20px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s
+}
+
+.tree li,
+.tree li::after,
+.tree li::before {
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s
+}
+
+.tree li {
+/*    float: left;*/
+    display: inline-block;
+    padding: 20px 5px 0;
+    list-style-type: none;
+    transition: all .5s;
+    margin-bottom: 15px;
+}
+
+.tree li::after,
+.tree li::before,
+.tree ul ul::before {
+    position: absolute;
+    top: 0;
+    height: 20px;
+    content: ''
+}
+
+.tree li::after,
+.tree li::before {
+    right: 50%;
+    width: 51%; /* Set width to 51% bcoz line is cutting with other line */
+    transition: all .5s;
+    border-top: 1px solid #ccc
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 1px solid #ccc
+}
+
+.tree li:only-child::after,
+.tree li:only-child::before {
+    display: none
+}
+
+.tree li:only-child {
+    padding-top: 0
+}
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+    border: 0
+}
+
+tree li:nth-child(5)::before {
+    border: 0;
+}
+
+.tree li:last-child::before {
+    border-right: 1px solid #ccc;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0
+}
+
+.tree li:first-child::after {
+    -webkit-border-radius: 5px 0 0;
+    -moz-border-radius: 5px 0 0;
+    border-radius: 5px 0 0
+}
+
+.tree li:nth-child(4)::after {
+border: 0;
+}
+
+.tree li:nth-child(4)::before { 
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;border-right: 1px solid #ccc; }
+
+.tree li:nth-child(5)::after {
+     -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+    border-radius: 5px 0 0 0;
+}
+
+.tree li:nth-child(5)::before {border-top: 0;}
+
+.tree li:nth-child(2), .tree li:nth-child(6) {padding-right: 15px;} 
+.tree li:nth-child(3), .tree li:nth-child(7) {padding-left: 15px;} 
+.tree ul ul::before {
+    left: 50%;
+    width: 0;
+    border-left: 1px solid #ccc
+}
+
+.tree li a {
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    padding: 10px 15px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    text-decoration: none;
+    color: #666;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    width:240px;
+}
+
+.tree li a:hover,
+.tree li a:hover+ul li a {
+    color: #000;
+    border: 1px solid #94a0b4;
+    background: #E0F7FA;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1)
+}
+
+.tree li a:hover+ul li::after,
+.tree li a:hover+ul li::before,
+.tree li a:hover+ul ul::before,
+.tree li a:hover+ul::before {
+    border-color: #94a0b4
+}
+
+.team-head a {
+    width: 160px
+}
+/*Left side*/
+ul.team li {
+    float: none;
+    right: 115px;
+    text-align: right;
+    padding: 5px 0 5px 20px
+}
+
+ul.team li a {
+    width: 140px;
+    text-align: right
+}
+
+ul.team li::after,
+ul.team li::before {
+    right: -20px;
+    left: auto;
+    height: 50%;
+    width: 20px;
+    border-top: none;
+    border-right: solid 1px #ccc
+}
+
+ul.team li::before,
+ul.team li:first-child::before {
+    border-bottom: solid 1px #ccc
+}
+
+ul.team li:last-child::before {
+    border-radius: 0 0 5px
+}
+
+ul.team li:first-child::before {
+    border-right: solid 1px #ccc
+}
+
+ul.team li::after {
+    top: 50%;
+    height: 50%;
+    border-left: none;
+    border-radius: 0
+}
+
+ul.team li:first-child::after {
+    border-radius: 0
+}
+
+/*Right side*/
+ul.team-right li {
+    float: none;
+    left: 116px;
+    text-align: left;
+    padding: 5px 0 5px 0
+}
+
+ul.team-right li a {
+    width: 140px;
+    text-align: right
+}
+
+ul.team-right li::after,
+ul.team-right li::before {
+    left: -20px;
+    /*left: auto;*/
+    height: 50%;
+    width: 20px;
+    border-top: none;
+    border-left: solid 1px #ccc
+}
+
+ul.team-right li::before,
+ul.team-right li:first-child::before {
+    border-bottom: solid 1px #ccc
+}
+
+ul.team-right li:last-child::before {
+    border-radius: 0 0 0 5px;
+    border-right: none;
+}
+
+ul.team-right li:first-child::before {
+    border-left: solid 1px #ccc
+}
+
+ul.team-right li::after {
+    top: 50%;
+    height: 50%;
+    /*border-left: none;*/
+    border-radius: 0
+}
+
+ul.team-right li:first-child::after {
+    border-radius: 0
+}
+
+ul.team li.last::after {
+    border-right: none;
+}
+
+/*Team right combined*/
+ul.team-right.combined {
+    position: absolute;
+    top: 0;
+}
+
+ul.team-right.combined::before {
+    border-left: none;
+}
+
+ul.team-right.combined li::before,
+ul.team-right.combined li:first-child::before,
+ul.team-right.combined li::after{
+    border-right: none;
+}
+
+.tree li a span {
+    display: block;
+    font-size: 11px;
+    text-align: left;
+    color: #757575
+}
+
+.tree li a span.name,
+strong {
+    color: #212121;
+    font-weight: 500
+}
+
+.tree li a span.name {
+    font-size: 13px
+}
+
+.tree li a span.designation {
+    margin-bottom: 5px
+}
+
+.team-head a.growth-pos {
+    background-color: #E8F5E9
+}
+
+.team-head a.growth-pos:hover {
+    background-color: #C8E6C9
+}
+
+.team-head a.backfill-pos {
+    background-color: #E8EAF6
+}
+
+.team-head a.backfill-pos:hover {
+    background-color: #C5CAE9
+}
+
+.tree li a.dept,
+.tree li a:hover a.dept {
+    border-top: solid 2px #f44336 !important
+}
+
+/* Tree Css */

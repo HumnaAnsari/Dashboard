@@ -1,0 +1,98 @@
+.k-widget {
+	color: $gray-base;
+}
+.kendo-grid {
+	height: 100%;
+
+	&.k-widget {
+		background-color: transparent;
+	}
+}
+
+.k-grid-content table {
+	@media (max-width: $screen-phone) {
+		table-layout: auto;
+	}
+}
+
+.k-grid table {
+	@media (max-width: $screen-phone) {
+		width: auto;
+	}
+}
+.k-grid-header {
+	th.k-header {
+		background-color: #FFF;
+		// font-size: 16px;
+		padding: 20px;
+		font-weight: 700;
+		border-width: 0 0 1px 0;
+		
+		.k-link {
+			padding: 0;
+			color: $gray-base;
+		}
+	}
+}
+
+.k-grid {
+	tr:hover {
+		background-color: #e1f5fe;
+	}
+	td {
+		padding: 15px 20px;
+	}
+	.k-alt {
+		background-color: transparent;
+	}
+}
+
+.k-grid-content tr td {
+	border-left-width: 0;
+	border-bottom-width: 1px;
+}
+
+.k-pager-wrap {
+	background-color: transparent;
+}
+
+
+
+// grid
+.k-grid-norecords-template {
+	background-color: transparent;
+	width: 100%;
+	box-sizing: border-box;
+}
+.k-grid {
+	width: 100%;
+	border: none;
+}
+
+.k-grid td,
+.k-grid-header th.k-header {
+	padding: 10px 20px;
+	color: $gray-base;
+}
+
+.k-grid-header th.k-header>.k-link {
+	line-height: 30px;
+}
+
+.k-header>.k-grid-filter {
+	padding: .35em .2em .4em;
+}
+
+.k-dropdown .k-state-default,
+form.k-filter-menu .k-textbox {
+	border-color: #ccc;
+}
+
+.k-filter-menu .k-button.k-primary {
+	background-color: $brand-primary;
+	color: #FFF;
+}
+
+ .km-widget {
+	 color: $gray-base;
+ }

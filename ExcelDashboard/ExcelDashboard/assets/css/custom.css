@@ -1,0 +1,36 @@
+/*.left-panel p {padding:0px;margin: 0px;}
+.left-panel ul.navigation li {float: left;width: 100%;}
+.left-panel ul.navigation li.title {margin-top:25px;}*/
+/*.page-title .control-group .form-group {margin-right:0px;}*/
+/*.btnCont .btn-primary {margin-left: 15px;}*/
+/*.btnCont .btn-primary:hover, .modal-footer .btn-primary:hover, .btnCont .btn-primary:active, .modal-footer .btn-primary:active, .btnCont .btn-primary:focus, .modal-footer .btn-primary:focus  {background-color: #1665b3;border-color: transparent;}*/
+/*.btnCont .btn-primary  .material-icons {float: left;}*/
+/*.modal-footer {background-color: #eceff1;border-color: transparent;}
+.modal-footer  .btn-secondary {background-color: #fff;border-color: #cccccc;}*/
+/*.modal-title {float: left;font-size: 16px;font-weight: bold;}*/
+/*.gridbtnsetcallback, .gridbtnsetcallback:hover, .gridbtnsetcallback:active, .gridbtnsetcallback:focus {background-color: #fff;border: 1px solid #b0bec5;color: #212121;}*/
+/*.gridbtndelete, .gridbtndelete:hover, .gridbtndelete:focus, .gridbtndelete:active {background-color: transparent;color: #ef5350;border-color: transparent;font-size:20px;}*/
+
+.dashboard h3 {font-size:18px;}
+
+
+/*.modal-dialog {z-index: 9999;}*/
+/* Tree Css */
+
+/** {padding: 0px;margin: 0px;}*/
+
+
+/* Burger Menu Css */
+/*.left-panel {transition:all .5s ease;-webkit-transition:all .5s ease;}
+.nav-collapsed .left-panel {width: 235px;left: -185px;transition:all .5s ease;-webkit-transition:all .5s ease;}
+.nav-collapsed .right-panel {margin-left: 50px;}
+.right-panel {    transition:all .5s ease;-webkit-transition:all .5s ease;z-index: 998;margin-right: 0px;}
+
+
+.nav-collapsed ul.navigation .nav-item a span {display: none;transition:all .5s ease;-webkit-transition:all .5s ease;}
+.nav-collapsed ul.navigation .nav-item a i {margin-left:178px;transition:all .5s ease;-webkit-transition:all .5s ease;}
+.nav-collapsed .left-panel p, .nav-collapsed .left-panel ul li.nav-title {display: none;transition:all .5s ease;-webkit-transition:all .5s ease;}
+.left-panel ul li {transition:all .5s ease;-webkit-transition:all .5s ease;}*/
+/* Burger Menu Css */
+
+/* Media Qurries */

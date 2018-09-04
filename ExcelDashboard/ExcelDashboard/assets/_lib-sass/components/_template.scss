@@ -1,0 +1,434 @@
+// Header
+header {
+	background-color: $header-bg;
+	color: $inverse-color;
+	height: $header-height;
+	padding-left: 0;
+	padding-right: 20px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 2300; 
+	
+	.logo-ex {
+		padding-top: 4px;
+
+		img {
+			width: 197px;
+			display: table-cell;
+			vertical-align: middle;
+		}
+	} //logo-ex
+
+	&.fixed {
+		position: fixed;
+	}
+
+	.ex-user {
+		height: $header-height;
+		line-height: $header-height;
+
+		.avatar {
+			margin-top: 5px;
+			margin-right: 5px;
+
+			vertical-align: top;
+		}
+
+		img {
+			
+			float: left;
+		}
+
+		a {
+			&:hover {
+				
+				i {	
+					color: #FFF;
+				}
+			}
+		}
+
+		.material-icons {
+			@include transition(all .6s ease);
+			float: right;
+			margin-left: 10px;
+			position: relative;
+			top: 14px;
+			color: $gray-light;
+		}
+	
+	}
+} // Header
+
+// leftpanel
+.left-panel {
+	color: $gray-lighter;
+	width: $leftpanel-width;
+	background-color: $left-bg;
+	position: fixed;
+	top: $header-height;
+	left: 0;
+	bottom: 0;
+	box-sizing: border-box;
+
+	p {
+		font-weight: 700;
+		padding: 20px 0;
+		text-transform: uppercase;
+	}
+} //leftpanel
+
+.nav-collapsed {
+	.right-panel {
+		margin: $header-height 0 0 $left-panel-collapsed;
+	}
+}
+
+.right-panel {
+	margin: $header-height 0 0 $leftpanel-width;
+	position: relative;
+	height: 100%;
+	@include transition(all .6s ease);
+	
+}
+
+
+// Page title with controls
+
+.page-title {
+	background-color: #FFF;
+	width: 100%;
+	display: table;
+	position: relative;
+	height: 70px;
+	padding: 0 20px;
+	font-size: 19px;
+	margin-bottom: 30px;
+	@include box-shadow(0px 0px 0px 2px rgba(0, 0, 0, 0.03));
+	border-bottom: solid 1px #ddd;
+	
+
+	h1 {
+		font-size: 20px;
+		line-height: 70px;
+		margin: 0;
+		float: left;
+
+		span {
+			line-height: 70px;
+			float: left;
+			opacity: .35;
+		}
+		.material-icons {
+			line-height: 70px;
+			float: left;
+			opacity: .35;
+			margin: 0 10px;
+		}
+	}
+
+	.action-btn {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.btnCont {
+		height: 70px;
+		line-height: 70px;
+	}
+	.control-group {
+		display: table-cell;
+		vertical-align: middle;
+		height: 70px;
+
+		.form-group {
+			padding-right: 5px;
+			display: table-cell;
+			vertical-align: middle;
+			height: 70px;
+
+			
+
+			
+			&:last-child {
+				padding-right: 0;
+			}
+
+			.form-control {
+				padding-left: 10px;
+				height: 34px;
+				line-height: 34px;
+				box-sizing: border-box;
+
+				&.k-widget {
+					padding-left: 0;
+					height: 34px;
+
+					.k-dropdown-wrap {
+						border: none;
+						border-radius: 4px;
+
+						.k-icon {
+							top: 3px;
+							right: 6px;
+						}
+					}
+
+					.k-input {
+						padding-left: 10px;
+						width: 100%;
+						border: none;
+						height: 32px;
+						
+						line-height: 30px;
+					}
+				}
+
+				input {
+					border: none;
+					line-height: normal;
+					background: transparent;
+					padding: 0;
+				}
+			}
+		}
+
+		span.label-txt { 
+			float: left;
+			line-height: 34px;
+			margin-right: 5px;
+
+			.cht-date {
+				position: relative;
+
+				&:before {
+					content: '/';
+					margin: 0 10px;
+					color: $gray-light-md;
+				}
+			}
+			
+		}
+
+		.controls {
+			float: left;
+			padding-left: 5px;
+
+			&.icon {
+				position: relative;
+				
+				.form-control { 
+					padding-right: 48px;
+				}
+
+				.k-icon {
+					position: absolute;
+					right: 14px;
+					top: 10px;
+				}
+			}
+
+			.k-input { 
+				border: none;
+				height: auto;
+				
+				
+
+				&.date {
+					padding-top: 8px;
+				}
+			}
+		} //Controls
+	}
+}
+
+.k-popup .k-list .k-item {
+	font-size: $font-size-base;
+}
+
+// Colors
+
+.blue-txt {
+	color: $blue;
+} 
+.green-txt {
+	color: $green;
+}
+.red-txt {
+	color: $red;
+}
+.indigo-txt {
+	color: $indigo;
+}
+.teal-txt {
+	color: $teal;
+}
+.orange-txt {
+	color: $orange;
+}
+.yellow-txt {
+	color: $yellow;
+}
+.light-blue-txt {
+	color: $light-blue;
+}
+
+.space-bottom {
+	margin-bottom: 15px;
+}
+
+.product-holder {
+
+	.group-details {
+		position: relative;
+		padding-top: 15px;
+
+		&:nth-child(1) {
+			padding-top: 0;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 12.5%;
+			right: 12.5%;
+			height: 1px;
+			background-color: #cfd8dc;
+			width: 75%;
+		}
+
+	}
+}
+
+.hr {
+	padding: 15px 20px;
+	border-top: solid 1px #cfd8dc;
+	background-color: #FFF;
+}
+
+.loader-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	// background-color: rgba(#2f3032, .95); 
+
+	
+
+}
+
+$green-load: #388E3C;
+$blue-load: #1976D2;
+$red-load: #d62d20;
+$yellow-load: #ffa700;
+$white-load: #eee;
+
+// scaling... any units
+$width: 45px;
+
+// demo-specific
+.showbox {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: -25px;
+}
+// end demo-specific
+
+.loader {
+  position: relative;
+  margin: 0 auto;
+  width: $width;
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.circular {
+  animation: rotate 2s linear infinite;
+  height: 100%;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes color {
+  100%,
+  0% {
+    stroke: $red-load;
+  }
+  40% {
+    stroke: $blue-load;
+  }
+  66% {
+    stroke: $green-load;
+  }
+  80%,
+  90% {
+    stroke: $yellow-load;
+  }
+}
+
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.3;
+	filter: alpha(opacity=60);
+	text-align: center;
+}
+
+	.overlay div {
+		position: relative;
+		font-size: 24px;
+		margin-top: -17px;
+		top: 50%;
+	}

@@ -1,0 +1,122 @@
+.nav-collapsed {
+	.nav {
+		width: $left-panel-collapsed;
+
+		@media (max-width: $screen-phone) {
+			width: 0;
+			overflow: hidden;
+		}
+
+		.nav-title  {
+
+			p {
+			visibility: hidden;
+			opacity: 0;
+			padding: 0;
+			margin: 0;
+			font-size: 1px;
+			}
+
+		}
+	}
+	
+	ul.navigation{
+		.nav-item {
+			a {
+
+				span {
+					@media (min-width: $screen-tablet) {
+						visibility: hidden;
+						opacity: 0;
+						padding-right: 20px;
+					}
+				}
+
+				&:hover {
+					
+					span {
+						@media (min-width: $screen-desktop) {
+							opacity: 1;
+							visibility: visible;
+							background-color: $gray-darker;
+							color: #FFF;
+							@include border-right-radius(3px);
+						}
+					}
+				}
+
+				&.active {
+					&:hover {
+						span {
+							background-color: #d64635;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.nav {
+	width: $leftpanel-width;
+	@include transition(all .6s ease);
+	z-index: 50;
+}
+
+ul.navigation {
+	list-style: none;
+	padding-left: 0;
+	width: 100%;
+	float: left;
+
+	.nav-title {
+			p {
+				visibility: visible;
+				opacity: 1;
+				width: 100%;
+				float: left;
+				padding: 15px 15px 0;
+				@include transition(all .6s ease);
+			}
+		}
+
+	.nav-item {
+		a {
+			width: 100%;
+			float: left;
+			position: relative;
+			color: #bdbdbd;
+			height: $header-height - 5px;
+			line-height: $header-height - 5px;
+			padding: 0 15px;
+			@include transition(all .6s ease);
+
+			&:hover {
+				background-color: $gray-darker;
+				color: #FFF;
+			}
+
+			&.active {
+				background-color: #d64635;
+				color: #FFF;
+			}
+
+			i {
+				float: left;
+				line-height: $header-height - 5px;
+				margin-right: 17px;
+			}
+
+			span {
+				white-space: nowrap;
+				position: absolute;
+				left: $left-panel-collapsed;
+				opacity: 1;
+				visibility: visible;
+				float: left;
+				@include transition(all .6s ease);
+			}
+		}
+	}
+}

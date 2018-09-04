@@ -1,0 +1,334 @@
+﻿
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/* Generic styling */
+
+
+.content {
+    width: 100%;
+    margin: 0;
+    float: left;
+    padding: 25px 0px;
+}
+
+content a:focus {
+    outline: 2px dashed #f7f7f7;
+}
+
+.org-chart {
+    float: left;
+    width: 100%;
+}
+
+
+@media all and (max-width: 767px) {
+    content .content {
+        padding: 0 20px;
+    }
+}
+
+.content ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    .content ul a {
+        display: block;
+        background: #FFF;
+        border: 1px solid #CCC;
+        text-align: center;
+        overflow: hidden;
+        font-size: 14px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #333;
+        height: 80px;
+        margin-bottom: -26px;
+        box-shadow: 4px 4px 9px -4px rgba(0,0,0,0.4);
+        -webkit-transition: all linear .1s;
+        -moz-transition: all linear .1s;
+        transition: all linear .1s;
+        border-radius: 3px;
+    }
+
+        .content ul a:hover {
+            color: #000;
+            border: 1px solid #94a0b4;
+            background: #E0F7FA;
+            -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+        }
+
+
+        .content ul a img {
+            width: 48px;
+            border-radius: 50px;
+            overflow: hidden;
+            float: left;
+            margin: 12px 12px 0 12px;
+        }
+
+
+
+        .content ul a span {
+            /* top: 50%; */
+            margin-top: 20px;
+            /* display: block; */
+            float: left;
+        }
+
+            .content ul a span small {
+                display: block;
+                text-align: left;
+                font-weight: 400;
+                color: #999;
+            }
+
+
+.administration > li > a {
+    margin-bottom: 25px;
+}
+
+.director > li > a {
+    width: 18.59894921190893%;
+    margin: 0 auto 0px auto;
+}
+
+.subdirector:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 130px;
+    background: red;
+    border-left: 1px solid #CCC;
+    left: 50.1%;
+    position: relative;
+}
+
+.subdirector {
+    position: absolute;
+    width: 100%;
+}
+
+    .subdirector > li:first-child,
+    .departments > li:first-child {
+        width: 18.59894921190893%;
+        height: 64px;
+        margin: 0 auto 92px auto;
+        padding-top: 25px;
+        /*  border-bottom: 1px solid #CCC; */
+        z-index: 1;
+    }
+
+    .subdirector > li:first-child {
+        float: right;
+        right: 27.2%;
+        border-left: 1px solid #CCC;
+    }
+
+.departments > li:first-child {
+    float: left;
+    left: 42.9%;
+    /* border-right: 1px solid #CCC; */
+}
+
+    .subdirector > li:first-child a,
+    .departments > li:first-child a {
+        width: 100%;
+    }
+
+.subdirector > li:first-child a {
+    left: 25px;
+}
+
+@media all and (max-width: 767px) {
+    .subdirector > li:first-child,
+    .departments > li:first-child {
+        width: 40%;
+    }
+
+    .subdirector > li:first-child {
+        right: 10%;
+        margin-right: 2px;
+    }
+
+    .subdirector:after {
+        left: 49.8%;
+    }
+
+    .departments > li:first-child {
+        left: 10%;
+        margin-left: 2px;
+    }
+}
+
+
+.departments > li:first-child a {
+    right: 25px;
+}
+
+.department:first-child,
+.departments li:nth-child(2) {
+    margin-left: 0;
+    clear: left;
+}
+
+.departments:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 81.1%;
+    height: 22px;
+    border-top: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+    margin: 0 auto;
+    top: 130px;
+    left: 9.4%;
+}
+
+@media all and (max-width: 767px) {
+    .departments:after {
+        border-right: none;
+        left: 0;
+        width: 49.8%;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .department:first-child:before,
+    .department:last-child:before {
+        border: none;
+    }
+}
+
+.department:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 30px;
+    border-left: 1px solid #CCC;
+    z-index: 1;
+    top: -25px;
+    left: 50%;
+    margin-left: 1px;
+}
+
+.department {
+    border-left: 1px solid #CCC;
+    width: 18.59894921190893%;
+    float: left;
+    margin-left: 1.751313485113835%;
+    margin-bottom: 60px;
+}
+
+.lt-ie8 .department {
+    width: 18.25%;
+}
+
+@media all and (max-width: 767px) {
+    .department {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+
+        .department:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 60px;
+            border-left: 4px solid white;
+            z-index: 1;
+            top: -60px;
+            left: 0%;
+            margin-left: -4px;
+        }
+
+        .department:nth-child(2):before {
+            display: none;
+        }
+}
+
+.department > a {
+    margin: 0 0 -26px -4px;
+    z-index: 1;
+}
+
+/*.department > a:hover {
+        height: 80px;
+    }*/
+
+.department > ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.department li {
+    padding-left: 25px;
+    border-bottom: 1px solid #CCC;
+    height: 80px;
+}
+
+    .department li a {
+        background: #fff;
+        top: 48px;
+        position: absolute;
+        z-index: 1;
+        width: 90%;
+        height: 80px;
+        vertical-align: middle;
+        right: -1px;
+    }
+
+        .department li a:hover {
+            box-shadow: 8px 8px 9px -4px rgba(0,0,0,0.1);
+            height: 80px;
+            background-image: none !important;
+        }
+
+/* Department/ section colors */
+
+
+
+@media screen and (min-device-width: 320px) and (max-device-width: 1023px) {
+    .content ul a {
+        font-size: 16px;
+    }
+
+    .director > li > a {
+        width: 100% !important;
+    }
+
+    .subdirector > li:first-child, .departments > li:first-child {
+        left: 4%;
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,36 @@
+.all-agents {
+	padding: 0;
+
+	li {
+		list-style: none;
+		border-bottom: solid 1px #ddd;
+
+		&:nth-child(-n+3) {
+			border-top: solid 1px #ddd
+		}
+
+		a {
+			width: 100%;
+			display: inline-block;
+			color: $gray-base;
+			padding: 20px;
+			@include transition(all .6s ease);
+
+			&:hover {
+				background-color: #FFF;
+			}
+		}
+		.user-info {
+			margin-left: 65px;
+
+			.agent-name {
+				margin-top: 10px;
+			}
+		
+			p {
+				color: $gray-light;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,223 @@
+// status 
+.status {
+	float: left;
+	padding-left: 20px;
+
+	span {
+		position: relative;
+		padding-left: 20px;
+		float: left;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 5px;
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+			display: inline-block;
+		}
+
+		&.active {
+			&:before{
+				background-color: $green;
+			}
+		}
+
+		&.inactive {
+			&:before {
+				background-color: $gray-light;
+			}
+		}
+
+		&.closed {
+			&:before {
+				background-color: $blue;
+			}
+		}
+	}
+	
+}
+// Social Icon 
+.social-icon {
+	float: left;
+	.k-icon {
+		margin-right: 10px;
+		border-radius: 50%;
+		width: 22px;
+		height: 22px;
+		text-align: center;
+		font-size: 12px;
+		float: left;
+
+		&:before {
+			left: 0;
+			right: 0;
+		}
+
+		&.k-i-facebook {
+			background-color: #3b5997;
+			color: #FFF;
+		}
+
+		&.k-i-twitter {
+			background-color: #5faade;
+			color: #FFF;
+		}
+
+	}
+}
+
+// Category badge
+
+.category {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 4px;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: inline-block;
+
+	&.support {
+		border-color: $orange;
+		color: $orange;
+	}
+
+	&.billing {
+		border-color: $green;
+		color: $green;
+	}
+	&.other {
+		border-color: $gray-light;
+		color: $gray-darker;
+	}
+}
+
+// Avatar
+
+.avatar {
+	width: 74px;
+	height: 74px;
+	border-radius: 50%;
+	float: left;
+	overflow: hidden;
+
+	&.small {
+		width: 18px;
+		height: 18px;
+	}
+
+	&.md {
+		width: 36px;
+		height: 36px;
+	}
+
+	&.lg {
+		width: 50px;
+		height: 50px;
+	}
+
+	img {
+		vertical-align: top;
+		width: 100%;
+	}
+}
+
+// User details
+
+.user-details {
+	.client-container {
+		display: table;
+	}
+	.category {
+		float: left;
+	}
+	.user-info {
+		display: table-cell;
+		vertical-align: middle;
+		margin-left: 84px;
+	}
+	.avatar {
+		margin-right: 10px;
+	}
+
+	.agent-name {
+		float: left;
+		padding-bottom: 3px;
+
+		span.role {
+			position: relative;
+			color: $gray-light;
+
+			&:before {
+				content: '-';
+				margin-left: 8px;
+				margin-right: 8px;
+				display: inline-block;
+			}
+		}
+	}
+	.social-icon {
+		margin-top: 0px;
+		margin-left: 10px;
+	}
+
+	.ag-sup {
+		margin-top: 10px;
+	}
+}
+
+// Chat History
+
+.chat-history {
+	.date-container {
+		text-align: center;
+		padding-bottom: 20px;
+		border-bottom: solid 1px #ddd;
+		
+		.date-stamp {
+			display: inline-block;
+			text-align: center;
+			background-color: #e0f7fa;
+			border: solid 1px #b2ebf2;
+			height: 35px;
+			line-height: 35px;
+			padding: 0 15px;
+			border-radius: 35px;
+		}
+	}
+}
+
+// Transcript styles
+.transcript-container {
+
+	.transcript {
+		width: 100%;
+		float: left;
+		border-bottom: solid 1px #ddd;
+		padding: 20px 25px;
+	}
+
+	.time {
+		font-size: 13px;
+		color: $gray-light;
+		margin-top: 5px;
+		display: inline-block;
+	}
+}
+
+.user-info {
+	margin-left: 55px;
+	
+	.agent-name {
+		// font-size: 16px;
+		font-weight: 700;
+		margin-top: 2px;
+		margin-bottom: 0;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}
