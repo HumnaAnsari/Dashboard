@@ -19,9 +19,10 @@
         }
     }
 
-    TotalChart();
-    MonthChart();
-    WeekChart();
+   // TotalChart();
+    TotalUAEChart();
+   // MonthChart();
+//WeekChart();
 });
 function createTotalChart(obj) {
     $("#totalChart").kendoChart({
@@ -30,7 +31,8 @@ function createTotalChart(obj) {
             text: "Sales-Total"
         },
         dataSource: {
-            data: obj
+            data: obj,
+           
         },
         series: [{
             type: "area",
@@ -41,6 +43,52 @@ function createTotalChart(obj) {
             type: "area",
             field: "Activation",
             name: "Activation"
+        }],
+        legend: {
+            position: "bottom"
+        },
+        categoryAxis: [{
+            //type: "date",
+            //baseUnit: "days",
+            labels: {
+                rotation: "auto",
+                //dateFormats: {
+                //    days: "MMM-d"
+                //}
+            }
+            //,
+            //field: "Month"
+        }],
+        tooltip: {
+            visible: true,
+            template: function (dataItem) {
+                //debugger;
+                // return "Total " + dataItem.dataItem.Sales + " Sales between " + dataItem.dataItem.FullIntervals
+            },
+            format: "{0}"
+        }
+
+    });
+}
+function createTotalUAEChart(obj) {
+    $("#totalUAEChart").kendoChart({
+        theme: "Office365",
+        title: {
+            text: "Sales and Activations-Total"
+        },
+        dataSource: {
+            data: obj,
+            group: [
+      { field: "Color" }
+            ]
+            
+        },
+        series: [{
+            type: "column",
+            field: "Sales",
+            categoryField: "Month",
+            name: "Sales",
+            labels: { visible: true }
         }],
         legend: {
             position: "bottom"
@@ -67,7 +115,6 @@ function createTotalChart(obj) {
 
     });
 }
-
 function createMonthChart(obj) {
     console.log(obj);
     $("#monthChart").kendoChart({
@@ -171,6 +218,23 @@ function TotalChart() {
         success: function (data) {
             //console.log(data);
             createTotalChart(data);
+        }
+
+    });
+
+
+}
+
+function TotalUAEChart() {
+
+    $.ajax({
+        url: '/Home/TotalUAEChart',
+        // data: JSON.stringify(),
+        type: 'POST',
+        contentType: 'application/json; charset=utf-8',
+        success: function (data) {
+            console.log(data);
+            createTotalUAEChart(data);
         }
 
     });

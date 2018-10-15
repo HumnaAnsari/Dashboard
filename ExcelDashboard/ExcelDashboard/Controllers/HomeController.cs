@@ -11,7 +11,7 @@ namespace ExcelDashboard.Controllers
 {
     public class HomeController : Controller
     {
-        static string path1 = "E:\\Projects\\Databasev3.xlsx";
+        static string path1 = "D:\\PracticeProjects\\Databasev3.xlsx";
         string connString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path1 + ";Extended Properties=\"Excel 12.0;HDR=Yes;IMEX=2\"";
 
         string today = DateTime.Now.ToString("MM/dd/yyyy");
@@ -183,6 +183,27 @@ namespace ExcelDashboard.Controllers
             return Json(obj, JsonRequestBehavior.AllowGet);
         }
 
+        public JsonResult TotalUAEChart()
+        {
+            string query = "SELECT [Month],[Option Type],SUM([Sales]) AS Sales,SUM([ID Activation]) AS Activation FROM [Master$] where [Cty Code]='ARE' group by [Month],[Option Type]";
+            DataTable dt = ConvertXSLXtoDataTable(query, connString);
+            List<TotalGraph> obj = new List<TotalGraph>();
 
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow i in dt.Rows)
+                {
+                    TotalGraph obj1 = new TotalGraph();
+                    obj1.Month = i["Month"].ToString().Trim();
+                    obj1.Color = i["Option Type"].ToString().Trim();
+                    obj1.Sales = i["Sales"].ToString().Trim();
+                    obj1.Activation = i["Activation"].ToString().Trim();
+                    obj.Add(obj1);
+                }
+
+            }
+
+            return Json(obj, JsonRequestBehavior.AllowGet);
+        }
     }
 }

@@ -10,6 +10,7 @@ namespace ExcelDashboard.Models
         public class TotalGraph
         {
             public string Month { get; set; }
+            public string Color { get; set; }
             public string Sales { get; set; }
             public string Activation { get; set; }
         }

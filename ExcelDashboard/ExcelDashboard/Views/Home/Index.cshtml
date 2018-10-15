@@ -139,18 +139,27 @@
      
                 <div class="tab-content">
 
-                    <div id="menu1" class="tab-pane fade">
+                    @*<div id="menu1" class="tab-pane fade">
                         <!-- Widgets -->
                         <div class="row clearfix">
                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                 <div class="info-box bg-pink hover-expand-effect">
                                     <div class="icon">
+                                        <div class="text">TODAY</div>
                                         <i class="material-icons">playlist_add_check</i>
                                     </div>
-                                    <div class="content">
-                                        <div class="text">SALES TODAY</div>
+                                  <div class="content col-lg-12 col-md-12 col-sm-12">
+                                    <div style="float:left">
+                                        <div class="text">SALES</div>
                                         <div class="number">@ViewBag.DailyData.Rows[0][0]</div>
                                     </div>
+                                      <div style="float:right">
+                                            <div class="text">ACTIVATIONS</div>
+                                            <div class="number">@ViewBag.DailyData.Rows[0][0]</div>
+                                      </div>
+                                        
+                                        
+                                  </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -219,7 +228,7 @@
                                              data-offset="90" data-width="100%" data-height="92px" data-line-Width="2" data-line-Color="rgba(255,255,255,0.7)"
                                              data-fill-Color="rgba(0, 188, 212, 0)">
                                             12,10,9,6,5,6,10,5,7,5,12,13,7,12,11
-                                        </div>*@
+                                        </div>
                                         <ul class="dashboard-stat-list">
                                             <li>
                                                 TODAY
@@ -335,58 +344,85 @@
                             <!-- #END# Monthly -->
                             
                         </div>
-                     </div>
-                   @*<div id="menu2" class="tab-pane fade">
-                        <!-- Widgets -->
-                        <div class="row clearfix">
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                <div class="info-box bg-pink hover-expand-effect">
-                                    <div class="icon">
-                                        <i class="material-icons">playlist_add_check</i>
-                                    </div>
-                                    <div class="content">
-                                        <div class="text">SALES TODAY</div>
-                                        @ViewBag.DailyDataARE.Rows[0][1]<div class="number">@ViewBag.DailyDataARE.Rows[1][2]</div>
-                                      //<div class="number">@ViewBag.DailyDataARE.Rows[0][2]</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                <div class="info-box bg-cyan hover-expand-effect">
-                                    <div class="icon">
-                                        <i class="material-icons">playlist_add_check</i>
-                                    </div>
-                                    <div class="content">
-                                        <div class="text">WEEKLY TOTAL</div>
-                                        <div class="number">@ViewBag.DailyDataARE.Rows[0][0]</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                <div class="info-box bg-light-green hover-expand-effect">
-                                    <div class="icon">
-                                        <i class="material-icons">playlist_add_check</i>
-                                    </div>
-                                    <div class="content">
-                                        <div class="text">MONTHLY TOTAL</div>
-                                        <div class="number">@ViewBag.DailyDataARE.Rows[0][0]</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                <div class="info-box bg-orange hover-expand-effect">
-                                    <div class="icon">
-                                        <i class="material-icons">playlist_add_check</i>
-                                    </div>
-                                    <div class="content">
-                                        <div class="text">ACCUMULATED TOTAL</div>
-                                        <div class="number">@ViewBag.DailyDataARE.Rows[0][0]</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- #END# Widgets -->
-                    </div>*@
+                     </div>*@
+                  <div id="menu2" class="tab-pane fade">
+                      <!-- Widgets -->
+                      <div class="row clearfix">
+                          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                              <div class="info-box bg-pink hover-expand-effect">
+                                  <div class="icon">
+                                      <div class="text">SALES TODAY</div>
+                                      @*<i class="material-icons">playlist_add_check</i>*@
+                                  </div>
+                                  <div class="content col-lg-12 col-md-12 col-sm-12">
+                                      <div style="float:left">
+                                          <div class="text">WHITE</div>
+                                          <div class="number">123</div>
+                                      </div>
+                                      <div style="float:right">
+                                          <div class="text">SILVER</div>
+                                          <div class="number">123</div>
+                                      </div>
+
+
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                              <div class="info-box bg-cyan hover-expand-effect">
+                                  <div class="icon">
+                                      <i class="material-icons">playlist_add_check</i>
+                                  </div>
+                                  <div class="content">
+                                      <div class="text">WEEKLY TOTAL</div>
+                                      <div class="number">456789</div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                              <div class="info-box bg-light-green hover-expand-effect">
+                                  <div class="icon">
+                                      <i class="material-icons">playlist_add_check</i>
+                                  </div>
+                                  <div class="content">
+                                      <div class="text">MONTHLY TOTAL</div>
+                                      <div class="number">741255</div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                              <div class="info-box bg-orange hover-expand-effect">
+                                  <div class="icon">
+                                      <i class="material-icons">playlist_add_check</i>
+                                  </div>
+                                  <div class="content">
+                                      <div class="text">ACCUMULATED TOTAL</div>
+                                      <div class="number">789654</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- #END# Widgets -->
+                      <!-- Sales Chart -->
+                      <div class="row clearfix">
+                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                              <div class="card">
+                                  <div class="header">
+                                      <div class="row clearfix">
+                                          <div class="col-xs-12 col-sm-6">
+                                              <h2>Overall Sales and Activations Trend</h2>
+                                          </div>
+                                      </div>
+
+                                  </div>
+                                  <div class="body">
+                                      <div id="totalUAEChart" class="dashboard-flot-chart"></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- #END# Sales Chart -->
+                    </div>
                  </div>
                 </div>
       
